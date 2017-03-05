@@ -1,12 +1,12 @@
 package cardgame.blackjack.bots;
 import cardgame.blackjack.BlackjackPlayer;
 
-public class BlackjackJames extends BlackjackPlayer {
+public class BlackjackSimpleJames extends BlackjackPlayer {
     private int standOnA;
     private int standOnB;
     private int weakdealer;
 
-    public BlackjackJames(int standOnA, int standOnB, int weakdealer) {
+    public BlackjackSimpleJames(int standOnA, int standOnB, int weakdealer) {
         super("James");
 
         this.standOnA = standOnA;
