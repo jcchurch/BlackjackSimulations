@@ -34,6 +34,10 @@ public class BlackjackHand {
         this.hand.add(card);
     }
 
+    public ArrayList<BlackjackCard> getCards() {
+        return this.hand;
+    }
+
     public boolean isSoft() {
         return this.softAces > 0;
     }

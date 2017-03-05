@@ -39,9 +39,15 @@ public class BlackjackGame {
     }
 
     public int getResolution() {
+        // The human views own hand
+        this.human.viewHand(this.human.getHand());
+
         if (this.human.getScore() > 21) {
             return -1;
         }
+
+        // The human views the dealer's hand
+        this.human.viewHand(this.dealer.getHand());
 
         if (this.dealer.getScore() > 21) {
             return 1;

@@ -6,13 +6,14 @@ public class Application {
     public static int playOne(BlackjackDeck deck, BlackjackDealer dealer, BlackjackPlayer player) {
         BlackjackGame game = new BlackjackGame(deck, dealer, player);
         game.play();
-        return game.getResolution();
+        return game.getResolution() * player.getBet();
     }
 
     public static void single() {
         BlackjackDealer dealer = new BlackjackDealer();
 
-        BlackjackPlayer player = new BlackjackJames(16, 14, 8);
+        BlackjackCountingJames player = new BlackjackCountingJames(16, 14, 8);
+        player.setDealer(dealer);
 
         BlackjackDeckBuilder builder = new BlackjackDeckBuilder(8);
         BlackjackDeck deck = builder.getDeck();
@@ -22,18 +23,20 @@ public class Application {
         System.out.println(dealer);
         System.out.println(player);
         System.out.println(resolution);
+        System.out.println(player.getCount());
         System.out.println("Deck size: "+deck.size());
     }
 
     public static void battery(int numtests, int x) {
         BlackjackDealer dealer = new BlackjackDealer();
-        BlackjackJames player = new BlackjackJames(x, 13, 5);
+        BlackjackCountingJames player = new BlackjackCountingJames(x, 13, 5);
         player.setDealer(dealer);
 
         int gamesPlayed = 0;
         int sum = 0;
 
         while (gamesPlayed < numtests) {
+            player.resetBet();
             BlackjackDeckBuilder builder = new BlackjackDeckBuilder(8);
             BlackjackDeck deck = builder.getDeck();
             deck.shuffle();

@@ -40,6 +40,18 @@ public abstract class BlackjackPlayer {
         return this.hand.isSoft();
     }
 
+    public BlackjackHand getHand() {
+        this.checkForSetHand();
+        return this.hand;
+    }
+
+    public void viewHand(BlackjackHand hand) {
+    }
+
+    public int getBet() {
+        return 1;
+    }
+
     public int getScore() {
         this.checkForSetHand();
         return this.hand.getScore();
