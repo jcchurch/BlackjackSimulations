@@ -1,3 +1,5 @@
+package cardgame;
+
 public enum CardValue {
     ACE,
     TWO,

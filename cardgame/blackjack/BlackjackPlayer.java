@@ -1,3 +1,5 @@
+package cardgame.blackjack;
+
 public abstract class BlackjackPlayer {
     private String name;
     private BlackjackHand hand;

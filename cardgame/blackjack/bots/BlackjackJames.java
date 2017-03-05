@@ -1,3 +1,6 @@
+package cardgame.blackjack.bots;
+import cardgame.blackjack.BlackjackPlayer;
+
 public class BlackjackJames extends BlackjackPlayer {
     private int standOnA;
     private int standOnB;

@@ -1,3 +1,5 @@
+package cardgame.blackjack;
+
 public class BlackjackGame {
 
     private BlackjackDeck deck;

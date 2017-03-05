@@ -1,3 +1,6 @@
+import cardgame.blackjack.*;
+import cardgame.blackjack.bots.*;
+
 public class Application {
 
     public static int playOne(BlackjackDeck deck, BlackjackDealer dealer, BlackjackPlayer player) {
@@ -8,7 +11,8 @@ public class Application {
 
     public static void single() {
         BlackjackDealer dealer = new BlackjackDealer();
-        BlackjackJames player = new BlackjackJames(16, 14, 8);
+
+        BlackjackPlayer player = new BlackjackJames(16, 14, 8);
 
         BlackjackDeckBuilder builder = new BlackjackDeckBuilder(8);
         BlackjackDeck deck = builder.getDeck();
@@ -40,7 +44,13 @@ public class Application {
             }
         }
 
-        System.out.printf("Resolution %7.4f out of %d games (%d, %d, %d).\n", sum / (double) gamesPlayed, gamesPlayed, player.getStandOnA(), player.getStandOnB(), player.getWeakDealer());
+        System.out.printf(
+            "Resolution %7.4f out of %d games (%d, %d, %d).\n",
+            sum / (double) gamesPlayed,
+            gamesPlayed,
+            player.getStandOnA(),
+            player.getStandOnB(),
+            player.getWeakDealer());
     }
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package cardgame.blackjack;
+
 import java.util.ArrayList;
 
 public class BlackjackDeck {

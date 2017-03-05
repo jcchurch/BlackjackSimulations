@@ -1,3 +1,7 @@
+package cardgame.blackjack;
+
+import cardgame.*;
+
 public class BlackjackCard extends Card {
 
     public BlackjackCard(int id) {

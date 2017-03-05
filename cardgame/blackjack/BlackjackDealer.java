@@ -1,3 +1,5 @@
+package cardgame.blackjack;
+
 public class BlackjackDealer extends BlackjackPlayer {
     public BlackjackDealer() {
         super("The Dealer");

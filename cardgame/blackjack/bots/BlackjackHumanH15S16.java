@@ -1,3 +1,6 @@
+package cardgame.blackjack.bots;
+import cardgame.blackjack.BlackjackPlayer;
+
 public class BlackjackHumanH15S16 extends BlackjackPlayer {
     public BlackjackHumanH15S16() {
         super("Hit on 15, Soft 16");
